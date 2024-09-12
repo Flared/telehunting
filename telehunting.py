@@ -2,7 +2,6 @@ import asyncio
 import re
 import pandas as pd
 import nltk
-from nltk.tokenize import word_tokenize
 from nltk.sentiment import SentimentIntensityAnalyzer
 from telethon.sync import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
@@ -17,7 +16,6 @@ import signal
 import os
 from datetime import datetime
 from colorama import init, Fore, Back, Style
-from collections import Counter
 
 init(autoreset=True)
 
