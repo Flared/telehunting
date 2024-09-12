@@ -1,0 +1,9 @@
+{
+    "initial_channel_links": [
+      "https://t.me/",
+      "https://t.me/",
+      "https://t.me/"
+    ],
+    "message_keywords": ["hack", "carding", "malware", "exploit", "cracking"],
+    "batch_size": 100
+  }

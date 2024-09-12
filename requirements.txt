@@ -1,0 +1,4 @@
+pandas==2.1.4+dfsg
+nltk==3.9.1
+telethon==1.29.2
+colorama==0.4.5
