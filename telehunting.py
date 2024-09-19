@@ -199,7 +199,7 @@ async def join_channel(client, channel_manager, link, max_retries=3):
             return True
 
         except FloodWaitError as e:
-            wait_time = min(e.seconds, 30)
+            wait_time = max(e.seconds, 30)
             print_warning(f"FloodWaitError encountered. Waiting for {wait_time} seconds. (Attempt {retries + 1}/{max_retries})")
             await asyncio.sleep(wait_time)
         except Exception as e:
@@ -435,7 +435,7 @@ async def scrape_messages(client, entity, message_limit, keywords, channel_manag
             await asyncio.sleep(0.1)
     except FloodWaitError as e:
         print_warning(f"FloodWaitError in scrape_messages: {e}")
-        await asyncio.sleep(min(e.seconds, 30))
+        await asyncio.sleep(max(e.seconds, 30))
     except Exception as e:
         print_error(f"Error scraping entity {entity_name}: {e}")
     
