@@ -1,9 +1,8 @@
 {
     "initial_channel_links": [
-      "https://t.me/",
-      "https://t.me/",
-      "https://t.me/"
+      "https://t.me/beregini_chat_official",
+      "https://t.me/killnet_official_chat"
     ],
-    "message_keywords": ["hack", "carding", "malware", "exploit", "cracking"],
+    "message_keywords": ["breached", "ransomware", "malware", "exploit", ".onion"],
     "batch_size": 100
   }

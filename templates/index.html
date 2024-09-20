@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Message Search</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Telegram Message Search</h1>
+
+        <form id="searchForm" class="form-container">
+            <input type="text" id="searchQuery" class="search-input" placeholder="Enter search query">
+            <button type="submit" class="search-button">Search</button>
+            <label for="sourceLanguage" class="source-language-label">Source Language:</label>
+            <select id="sourceLanguage" class="source-language-select">
+                <option value="en" selected>English</option>
+                <!-- Add other source language options as needed -->
+            </select>
+            <div id="languageOptions" class="language-options">
+                <label><input type="checkbox" name="lang" value="en"> English</label>
+                <label><input type="checkbox" name="lang" value="ru"> Russian</label>
+                <label><input type="checkbox" name="lang" value="zh-CN"> Chinese (Simplified)</label>
+                <label><input type="checkbox" name="lang" value="fr"> French</label>
+                <label><input type="checkbox" name="lang" value="fa"> Farsi</label>
+                <label><input type="checkbox" name="lang" value="es"> Spanish</label>
+                <label><input type="checkbox" name="lang" value="pt"> Portuguese</label>
+                <label><input type="checkbox" name="lang" value="tr"> Turkish</label>
+                <label><input type="checkbox" name="lang" value="vi"> Vietnamese</label>
+                <label><input type="checkbox" name="lang" value="uk"> Ukrainian</label>
+                <label><input type="checkbox" name="lang" value="hi"> Hindi</label>
+                <label><input type="checkbox" name="lang" value="he"> Hebrew</label>
+                <label><input type="checkbox" name="lang" value="id"> Indonesian</label>
+                <label><input type="checkbox" name="lang" value="de"> German</label>
+                <label><input type="checkbox" name="lang" value="th"> Thai</label>
+                <label><input type="checkbox" name="lang" value="ms"> Malay</label>
+                <label><input type="checkbox" name="lang" value="ja"> Japanese</label>
+            </div>
+        </form>
+
+        <!-- Pagination controls at the top -->
+        <div id="paginationTop" class="pagination">
+            <button id="firstPageButtonTop" class="page-button">&laquo;</button>
+            <button id="prevPageButtonTop" class="page-button">Previous</button>
+            <div id="pageNumbersTop" class="page-numbers"></div>
+            <button id="nextPageButtonTop" class="page-button">Next</button>
+            <button id="lastPageButtonTop" class="page-button">&raquo;</button>
+        </div>
+
+        <!-- Translation info display -->
+        <div class="translation-info" id="translationInfo"></div>
+
+        <div class="search-results">
+            <h2>Search Results:</h2>
+            <ul id="messageList" class="message-list"></ul>
+        </div>
+
+        <!-- Pagination controls at the bottom -->
+        <div id="paginationBottom" class="pagination">
+            <button id="firstPageButtonBottom" class="page-button">&laquo;</button>
+            <button id="prevPageButtonBottom" class="page-button">Previous</button>
+            <div id="pageNumbersBottom" class="page-numbers"></div>
+            <button id="nextPageButtonBottom" class="page-button">Next</button>
+            <button id="lastPageButtonBottom" class="page-button">&raquo;</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
